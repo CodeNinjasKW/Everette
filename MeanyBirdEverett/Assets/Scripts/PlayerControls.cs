@@ -38,4 +38,14 @@ public class PlayerControls : MonoBehaviour
         }
 
     }
+
+    //function where the player collides with an object
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "High Spike" || collision.gameObject.tag == "Low Spike" || collision.gameObject.tag == "Ground")
+        {
+            //Game Over function is called from the Game Manager
+            GameObject.Find("Game Controller").GetComponent<GameController>().GameOver();
+        }
+    }
 }

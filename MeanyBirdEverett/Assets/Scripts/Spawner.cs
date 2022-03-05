@@ -11,6 +11,7 @@ public class Spawner : MonoBehaviour
     [Header("Default Height")]
     public float height;
     // Start is called before the first frame update
+
     void Start()
     {
         //start function repeating every 4 seconds
